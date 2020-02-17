@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class MultipleChoice extends Question{
     private ArrayList<String> multipleChoiceAnswerOptions;
-    private int correctAnswer;
+    private int correctMultipleChoiceAnswer;
     private int multipleChoiceScore = 0;
 
-    public MultipleChoice(String inquiry, ArrayList<String> multipleChoiceAnswerOptions, int correctAnswer) {
+    public MultipleChoice(String inquiry, ArrayList<String> multipleChoiceAnswerOptions, int correctMultipleChoiceAnswer) {
         super(inquiry);
         this.multipleChoiceAnswerOptions = multipleChoiceAnswerOptions;
-        this.correctAnswer = correctAnswer;
+        this.correctMultipleChoiceAnswer = correctMultipleChoiceAnswer;
     }
 
     public ArrayList<String> getMultipleChoiceAnswerOptions() {
@@ -22,14 +22,14 @@ public class MultipleChoice extends Question{
         this.multipleChoiceAnswerOptions = multipleChoiceAnswerOptions;
     }
 
-    public int getCorrectAnswer() {
+    public int getCorrectMultipleChoiceAnswer() {
 
-        return correctAnswer;
+        return correctMultipleChoiceAnswer;
     }
 
-    public void setCorrectAnswer(int correctAnswer) {
+    public void setCorrectMultipleChoiceAnswer(int correctMultipleChoiceAnswer) {
 
-        this.correctAnswer = correctAnswer;
+        this.correctMultipleChoiceAnswer = correctMultipleChoiceAnswer;
     }
 
     public int getCorrectMultipleChoiceScore() {
@@ -38,7 +38,7 @@ public class MultipleChoice extends Question{
     }
 
     public int checkForCorrectMultipleChoiceAnswer(int userAnswer){
-        if(userAnswer == correctAnswer){
+        if(userAnswer == correctMultipleChoiceAnswer){
             this.multipleChoiceScore += 1;
         }
         return this.multipleChoiceScore;
