@@ -39,8 +39,12 @@ public class MultipleChoice extends Question{
 
     public int checkForCorrectMultipleChoiceAnswer(int userAnswer){
         if(userAnswer == correctMultipleChoiceAnswer){
+            System.out.println("Correct!");
             this.multipleChoiceScore += 1;
+        } else {
+            System.out.println("Sorry, that's incorrect.");
         }
+
         return this.multipleChoiceScore;
     }
 }

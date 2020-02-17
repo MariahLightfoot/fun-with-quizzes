@@ -39,9 +39,12 @@ public class CheckBox extends Question{
 
     public int checkForCorrectCheckBoxAnswer(String userAnswer){
         if(correctCheckBoxAnswers.contains(userAnswer)){
+            System.out.println("Correct!");
             this.checkBoxScore += 1;
+        } else {
+            System.out.println("Sorry, that is incorrect");
         }
-        System.out.println(checkBoxScore);
+
         return this.checkBoxScore;
     }
 }
