@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MultipleChoice extends Question{
     private ArrayList<String> multipleChoiceAnswerOptions;
     private int correctAnswer;
-    private int score = 0;
+    private int multipleChoiceScore = 0;
 
     public MultipleChoice(String inquiry, ArrayList<String> multipleChoiceAnswerOptions, int correctAnswer) {
         super(inquiry);
@@ -14,6 +14,7 @@ public class MultipleChoice extends Question{
     }
 
     public ArrayList<String> getMultipleChoiceAnswerOptions() {
+
         return multipleChoiceAnswerOptions;
     }
 
@@ -22,24 +23,24 @@ public class MultipleChoice extends Question{
     }
 
     public int getCorrectAnswer() {
+
         return correctAnswer;
     }
 
     public void setCorrectAnswer(int correctAnswer) {
+
         this.correctAnswer = correctAnswer;
     }
 
-    public void printAnswerOptionsForMultipleChoice(ArrayList<String> multipleChoiceAnswerOptions){
-        System.out.println("Please choose the number that corresponds to the correct answer");
-        for (String answerOption : multipleChoiceAnswerOptions){
-            System.out.println(answerOption);
-        }
+    public int getCorrectMultipleChoiceScore() {
+
+        return multipleChoiceScore;
     }
 
     public int checkForCorrectMultipleChoiceAnswer(int userAnswer){
         if(userAnswer == correctAnswer){
-            this.score += 1;
+            this.multipleChoiceScore += 1;
         }
-        return score;
+        return this.multipleChoiceScore;
     }
 }

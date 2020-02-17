@@ -14,18 +14,20 @@ public class Main {
         //add them to quiz
         //check answer
 
-        ArrayList<String> answersForWhatIsTwoPlusTwo = new ArrayList<>();
-        answersForWhatIsTwoPlusTwo.add("1 - 4");
-        answersForWhatIsTwoPlusTwo.add("2 - 5");
-        answersForWhatIsTwoPlusTwo.add("3 - 5");
+        ArrayList<String> answerChoicesForWhatIsTwoPlusTwo = new ArrayList<>();
+        answerChoicesForWhatIsTwoPlusTwo.add("1 - 4");
+        answerChoicesForWhatIsTwoPlusTwo.add("2 - 5");
+        answerChoicesForWhatIsTwoPlusTwo.add("3 - 5");
 
-        MultipleChoice whatIsTwoPlusTwo = new MultipleChoice("What is 2 + 2?", answersForWhatIsTwoPlusTwo, 1);
+        MultipleChoice whatIsTwoPlusTwo = new MultipleChoice("What is 2 + 2?", answerChoicesForWhatIsTwoPlusTwo, 1);
 
-        Scanner userInputForMultipleChoice = new Scanner(System.in);
+        Scanner inputForMultipleChoice = new Scanner(System.in);
         whatIsTwoPlusTwo.printQuestion();
-        whatIsTwoPlusTwo.printAnswerOptionsForMultipleChoice(answersForWhatIsTwoPlusTwo);
+        whatIsTwoPlusTwo.printAnswerOptions(answerChoicesForWhatIsTwoPlusTwo);
         System.out.println("Choose wisely: ");
-        userInputForMultipleChoice.nextInt();
+        int userInputForMultipleChoice = inputForMultipleChoice.nextInt();
+
+        whatIsTwoPlusTwo.checkForCorrectMultipleChoiceAnswer(userInputForMultipleChoice);
 
     }
 
