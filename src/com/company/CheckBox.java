@@ -13,34 +13,18 @@ public class CheckBox extends Question{
         this.correctCheckBoxAnswers = correctCheckBoxAnswers;
     }
 
-    public ArrayList<String> getCheckBoxAnswerOptions() {
-
-        return checkBoxAnswerOptions;
-    }
-
-    public void setCheckBoxAnswerOptions(ArrayList<String> checkBoxAnswerOptions) {
-        this.checkBoxAnswerOptions = checkBoxAnswerOptions;
-    }
-
-    public ArrayList<String> getCorrectCheckBoxAnswer() {
-
-        return correctCheckBoxAnswers;
-    }
-
-    public void setCorrectCheckBoxAnswer(ArrayList<String> correctCheckBoxAnswer) {
-
-        this.correctCheckBoxAnswers = correctCheckBoxAnswer;
-    }
-
     public int getCheckBoxScore() {
 
         return checkBoxScore;
     }
 
     public int checkForCorrectCheckBoxAnswer(String userAnswer){
+
         if(correctCheckBoxAnswers.contains(userAnswer)){
             System.out.println("Correct!");
             this.checkBoxScore += 1;
+        } else if (userAnswer.toLowerCase().equals("nope")){
+            System.out.println("Ok!");
         } else {
             System.out.println("Sorry, that is incorrect");
         }

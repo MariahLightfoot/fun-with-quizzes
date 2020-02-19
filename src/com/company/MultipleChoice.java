@@ -13,31 +13,13 @@ public class MultipleChoice extends Question{
         this.correctMultipleChoiceAnswer = correctMultipleChoiceAnswer;
     }
 
-    public ArrayList<String> getMultipleChoiceAnswerOptions() {
-
-        return multipleChoiceAnswerOptions;
-    }
-
-    public void setMultipleChoiceAnswerOptions(ArrayList<String> multipleChoiceAnswerOptions) {
-        this.multipleChoiceAnswerOptions = multipleChoiceAnswerOptions;
-    }
-
-    public int getCorrectMultipleChoiceAnswer() {
-
-        return correctMultipleChoiceAnswer;
-    }
-
-    public void setCorrectMultipleChoiceAnswer(int correctMultipleChoiceAnswer) {
-
-        this.correctMultipleChoiceAnswer = correctMultipleChoiceAnswer;
-    }
-
     public int getCorrectMultipleChoiceScore() {
 
         return multipleChoiceScore;
     }
 
     public int checkForCorrectMultipleChoiceAnswer(int userAnswer){
+
         if(userAnswer == correctMultipleChoiceAnswer){
             System.out.println("Correct!");
             this.multipleChoiceScore += 1;

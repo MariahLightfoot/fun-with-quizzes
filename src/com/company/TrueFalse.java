@@ -9,19 +9,13 @@ public class TrueFalse extends Question{
         this.trueFalseCorrectAnswer = trueFalseCorrectAnswer;
     }
 
-    public int isTrueFalseCorrectAnswer() {
-        return trueFalseCorrectAnswer;
-    }
-
-    public void setTrueFalseCorrectAnswer(int trueFalseCorrectAnswer) {
-        this.trueFalseCorrectAnswer = trueFalseCorrectAnswer;
-    }
-
     public int getTrueFalseScore() {
+
         return trueFalseScore;
     }
 
     public int checkForCorrectTrueFalseAnswer(int userAnswer){
+
         if(userAnswer == trueFalseCorrectAnswer ){
             System.out.println("Correct!");
             this.trueFalseScore += 1;
@@ -32,8 +26,4 @@ public class TrueFalse extends Question{
         return this.trueFalseScore;
     }
 
-    public void printAnswerOptions(){
-        System.out.println("1 - True");
-        System.out.println("2 - False");
-    }
 }
